@@ -8,7 +8,7 @@ body {
     width: 100vw;
     border: 1px solid red;
     margin: 0px;
-    padding: 8px;
+    padding: 16px 8px;
     box-sizing: border-box;
 }
 
@@ -27,7 +27,7 @@ img {
     border-color: gray;
     border-radius: 8px;
     padding: 8px;
-    margin-right: 16px;
+    margin-right: 32px;
 }
 
 .logo-title, .nav-links-1 > * {
@@ -48,7 +48,7 @@ img {
 .logo-title > img {
     height: 36px;
     border-radius: 0%;
-    /* border: 1px solid blue; */
+    margin-right: 8px;
     justify-self: center;
 }
 
@@ -60,10 +60,10 @@ img {
 }
 
 .header {
-    padding: 12px;
+    padding: 0px 12px 12px 0px;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 5fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     justify-items: start;
     align-items: center;
 }
@@ -80,7 +80,7 @@ img {
     align-items: center;
 }
 
-.search-bar > img {
+#search-icon, #notification-icon {
     height: 24px;
 }
 
@@ -98,15 +98,154 @@ img {
 }
 
 .header-items {
+    justify-self: end;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
     gap: 12px;
+}
 
+#language {
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+}
+
+#language:focus {
+    outline: none;
+}
+
+#profile-icon {
+    height: 56px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: orange;
 }
 
 .body {
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 9fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: lightgray;
+    border-radius: 12px;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: 24px repeat(auto-fill, 210px);
+    column-gap: 12px;
+    row-gap: 12px;
+    padding: 12px;
+    grid-auto-flow: row;
+}
+
+.subsection {
+    grid-column: 1 / 3;
+    justify-self: start;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    justify-items: start;
+    padding: 12px;
+    border-left: 12px solid orange;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.card-title, .title {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.card-buttons {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 8px;
+    justify-self: end;
+    margin-bottom: 12px;
+}
+
+.announcements {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 24px 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 12px;
+    margin-right: 12px;
+    padding: 12px 0px;
+}
+
+.box {
+    display: grid;
+    grid-auto-rows: auto;
+    justify-content: center;
+    padding: 12px;
+}
+
+.title {
+    font-size: 1rem;
+}
+
+.content > .box:nth-child(1) {
+    border-bottom: 2px solid lightgray;
+}
+
+.content > .box:nth-child(3) {
+    border-top: 2px solid lightgray;
+}
+
+.trending {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 24px 1fr;
+    align-items: start;
+    justify-items: start;
+    gap: 12px;
+    padding: 12px 0px;
+    margin-right: 12px;
+}
+
+.content {
+    background-color: white;
+    justify-self: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    padding: 12px;
+    border-radius: 12px;
+    gap: 12px;
+}
+
+.user {
+    justify-self: stretch;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    padding: 8px;
+}
+
+.user img {
+    height: 36px;
+    border-radius: 50%;
+    grid-row: 1 / 3;
+    justify-self: center;
+    background-color: orange;
+}
+
+.user-title {
+    color: darkgray
 }
 
